@@ -1,0 +1,135 @@
+.find-icons{ /*각 아이콘들을 담고 있는 부모요소*/
+    display: flex;
+    justify-content: space-between;
+   
+}
+
+.find-icons__icon{ /*span과 아이콘을 담고 있음. 플렉스 주고 -> 세로 배열로 해서 그림과 글자가 위아래로 배치하도록 */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /*column이 되면서 교차축이 반대가 됨.*/
+}
+
+.find-icons__icon i{
+    font-size: 35px; /*find-icons__icon class안에 있는 아이콘 폰트사이즈 변경으로 아이콘 크기 바꾸기 가능*/
+    margin-bottom: 15px;
+}
+
+.find-icons span{
+    margin-bottom: 35px;
+}
+
+.recommended-friends{
+    border-bottom: var(--main-border);
+    border-top: var(--main-border);
+    padding: 25px 0px;
+    margin-bottom: 20px;
+
+}
+
+
+
+.recommended-friends__title{
+    color: var(--gray);
+    font-weight: 600;
+    font-size: 15px;
+}
+
+.recommended-friends span{ /*span은 인라인이라서 margin적용 안됨*/
+    margin: 100px 0;
+    text-align: center;
+    display: block; /*block으로 해주면 높이가 생겨서 margin적용할 수있음*/
+    color: var(--gray);
+    font-weight: 600;
+}
+
+.open-chart__header{
+    display: flex;
+    justify-content: space-between;
+    color: var(--gray);
+    font-weight: 400;
+    margin-bottom: 25px;
+}
+
+.open-post{ /*두개의 column으로 이루어져있어서 둘을 끝으로 배열하고 수평맞추기*/
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.open-post__title{
+    font-weight: 600;
+    margin-bottom:  7px;
+}
+
+.open-post__hashtags{
+    font-weight: 500;
+    text-transform: uppercase;
+    color: var(--gray);
+}
+
+.open-post__members img{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    margin-right: 8px;
+}
+
+.open-post__members{
+    display: flex;
+    align-items: center;
+    margin-top: 7px;
+}
+
+.open-post__member-count{
+    opacity: 0.5;
+    font-weight: 400;
+}
+
+.open-post__members .divider{ 
+    /*코드상에 또다른 divide가 있을수도 있찌만 이렇게 하면
+    open post members안에 있는 divider에만 적용됨*/
+    width: 1px;
+    height: 15px;
+    background-color: var(--gray); /*color아니고 배경색인거 주의 */
+    margin: 0px 5px;
+}
+
+.open-post__member-status{
+    color: rgb(202, 62, 160);
+    font-weight: 500;
+}
+
+.open-post__photo img{
+    width: 120px;
+    height: 120px;
+    border-radius: 20px;
+}
+
+.open-post__photo{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin-bottom: 10px;
+} 
+
+.open-post__heart{ /*이 클래스 안에 아이콘, span의 요소가 있기에 flex시용 기능*/
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 30px;
+    color: white;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    position: absolute; /*absolute는 해당컨텐츠 크기만큼만 감쌈 만약 넓이와 높이가 없다면, 지정된 padding값만큼만 가짐*/
+    bottom: 10px;
+    right: 10px;
+    font-size: 12px;
+}
+
+.open-post__heart span{
+    margin-left: 5px;
+}
+
+.open-post__heart i{
+    margin-left: 10px;
+}

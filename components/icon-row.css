@@ -1,0 +1,21 @@
+.icon-row{ /*각 아이콘들을 담고 있는 부모요소*/
+    display: flex;
+    justify-content: space-between;
+   
+}
+
+.icon-row__icon{ /*span과 아이콘을 담고 있음. 플렉스 주고 -> 세로 배열로 해서 그림과 글자가 위아래로 배치하도록 */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /*column이 되면서 교차축이 반대가 됨.*/
+}
+
+.icon-row__icon i{
+    font-size: 35px; /*icon-row__icon class안에 있는 아이콘 폰트사이즈 변경으로 아이콘 크기 바꾸기 가능*/
+    margin-bottom: 15px;
+}
+
+.icon-row span{
+    margin-bottom: 35px;
+}
+

@@ -1,0 +1,21 @@
+.screen-header{
+    display: flex;
+    justify-content: space-between;
+    padding: 25px;
+    align-items: center;
+    margin-top: 20px;
+    padding:var(--horizontal-space);
+    margin-bottom: 15px;
+}
+
+.screen-header__title{
+    font-size: 32px;
+    font-weight: 600;
+    
+   
+}
+
+.screen-header__icons span{
+    margin-left: 25px;
+    position: relative; /*cog-dot에다가 absolute설정을 해놨고, 그렇기에 부모요소인 icons에 relative설정*/
+}

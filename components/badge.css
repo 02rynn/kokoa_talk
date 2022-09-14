@@ -1,0 +1,13 @@
+.badge{
+    background-color: tomato;
+    width: 20px;
+    height: 20px; /*span이라서 inline으로 적용됨*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    color: white;
+    font-weight: 600;
+   
+}
+
