@@ -1,6 +1,6 @@
 #chat-screen{
     background: linear-gradient(rgb(168, 101, 204)3%,rgb(63, 63, 143));
-    height: 1000vh;
+    height: 500vh;
 }
 
 /*아래와 같이 .찌고 표현할때, 띄어쓰기 주의 */
@@ -47,12 +47,27 @@ z-index는 div의 위치가 맨 앞에서부터 몇번째 인지를 표시함.
     /*status bar 보이게 하기 위헤서 */
 }
 
+@keyframes fadeIn{
+   
+    from{
+        transform: translateY(10px);
+        opacity: 0;
+    }
+    to{
+        transform: nones;
+        opacity: 1;
+    }
+   
+
+}
+
 .main-chat{
     margin-top: 120px;
     display: flex;
     flex-direction: column;
     align-items: center;
     font-size: 14px;
+    animation: fadeIn 1s ease-in-out;
 
     /*div의 width가 글자길이만큼 줄어드는데, display flex를
     하면 글자크기에 맞춰서 줄어드는듯, 그리고 flex direction을 column으로 히면
@@ -136,5 +151,108 @@ row-reverse사용해도 됨  */
     flex-direction: row-reverse;
     margin-left: 5px;
 }
+
+.reply{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 25px;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.reply .reply__column:first-child{
+    width: 10%;
+}
+.reply .reply__column:last-child{
+    width: 90%;
+    position: relative;
+}
+
+
+/*버튼 안에 있는 arrow이모티콘 까지 같이 움직이는것을 막기 위해 direct로 */
+.reply__column:last-child > i,
+.reply__column button {
+    position: absolute;
+    right: 0;
+    top: 8px;
+    right: -3px;
+    
+}
+
+
+.reply__column button {
+    background-color:rgb(208, 155, 209); ;
+    border-style: none;
+    border-radius: 50%;
+    width: 25px; /*버튼에 넓이와 높이를 주니까 동그랗게 변함. 이거 안주면 약간 홀쭉하고 기울여져보임*/
+    height: 25px;
+   
+}
+
+
+.reply__column button:focus,
+.reply__column button:active {
+    outline: none;
+   
+    
+}
+
+.reply__column:last-child >i{
+    right: 40px;
+    top: 12px;
+}
+
+.reply input {
+    padding: 7px;
+    height: 30px;
+    width: 100%;
+    border: var(--main-border);
+    border-radius: 20px;
+    transition: all 1s ease-in-out;
+    
+    
+    /*이렇게만 넓이가 안먹음. input이 column안에 있는데
+    column(div)은 넓이를 갖지 않기 때문
+    그래서 위와 같이 column에 width를 넣어주었음
+    컬럼에 주어야지 -> input도 width 가질 수 있음 
+    */
+}
+
+.reply input:focus{
+    border-color: #d09bd1 ;
+    outline: none;
+    transition: border-color 0.3s ease-in-out;
+    width: 98vw;
+    transform: translateX(-13%) translateY(-80px) ;
+  
+}
+
+.reply:focus-within{
+    transform:  translateY(80px);
+}
+
+.reply i{
+    opacity: 0.5;
+}
+
+
+.reply .reply__column:first-child,
+.reply .fa-smile-wink,
+.reply button  {
+    transition: opacity 0.3s ease-in-out;
+}
+
+
+.reply:focus-within .reply__column:first-child
+.reply:focus-within .fa-smile-wink,
+.reply:focus-within button {
+    opacity: 0;
+}
+/*focus within은 내부에 focus된 element가 있는지 보는 것.
+만약 focus된게 있다면 뒤에 있는 애들이 실행될것임 */
 
 

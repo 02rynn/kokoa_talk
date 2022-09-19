@@ -1,0 +1,21 @@
+#no-mobile{
+    position: absolute;
+    z-index: 99;
+    height: 100vh;
+    width: 100vw;
+    background: linear-gradient(rgb(168, 101, 204)3%,rgb(63, 63, 143));
+    display: flex;
+    top: 0;
+    justify-content: center;
+    align-items: center;
+    font-size: 32px;
+    /*z인덱스를 높게줘서 다른 어떤 요소보다도 위에 있도록 */
+}
+
+@media screen and (max-width:645px) {
+    #no-mobile{
+        display: none;
+
+    }
+    /*645보다 작아지면  no mobile화면이 보이지 않도록*/
+}

@@ -19,3 +19,16 @@
     margin-left: 25px;
     position: relative; /*cog-dot에다가 absolute설정을 해놨고, 그렇기에 부모요소인 icons에 relative설정*/
 }
+
+@keyframes rotateCog{
+    from{
+        transform: none;
+    }
+    to{
+        transform: rotateZ(360deg);
+    }
+}
+.screen-header__icons .fa-cog:hover {
+    animation: rotateCog 1s linear infinite;
+
+}

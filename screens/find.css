@@ -124,6 +124,7 @@
     bottom: 10px;
     right: 10px;
     font-size: 12px;
+    
 }
 
 .open-post__heart span{
@@ -132,4 +133,26 @@
 
 .open-post__heart i{
     margin-left: 10px;
+}
+
+@keyframes heartBeat {
+    0%{
+        color: white;
+        transform: none;
+    }
+
+    50%{
+        color: tomato;
+        transform: scale(1.5);
+    }
+    100%{
+        color: white;
+
+    }
+
+}
+
+.open-post__heart:hover i {
+    will-change: transform; /*애니메이션을 가속화함. */
+    animation: heartBeat 1s linear infinite;
 }

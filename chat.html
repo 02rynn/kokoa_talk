@@ -30,6 +30,21 @@
         </div>
     </div>
 
+    <header class="alt-header">
+        <div class="alt-header__column">
+            <a href="chats.html">
+            <i class="fas fa-angle-left fa-3x"></i></a>   
+        </div>
+        <div class="alt-header__column">
+            <h1 class="alt-header__title">Elsa</h1>
+        </div>
+        <div class="alt-header__column">
+            <span><i class="fas fa-search fa-lg"></i></span>
+            <span><i class="fas fa-bars fa-lg"></i></span>
+            <!--굳이 새로운 이모티콘 붙인다고 div부터 다 만들필요 없고, lastchild로 묶여있으니까 같은 div안에 넣어버리기-->
+        </div>
+    </header>
+
     <main class="main-screen main-chat">
         <div class="chat__timestamp">
             Friday, September 16, 2022
@@ -58,31 +73,30 @@
                 </div>
             </div>
         </div>
-
-
-
     </main>
 
-    <header class="alt-header">
-        <div class="alt-header__column">
-            <a href="chats.html">
-            <i class="fas fa-angle-left fa-3x"></i></a>   
+    <form class="reply">
+        <div class="reply__column">
+            <i class="far fa-plus-square fa-lg"></i>
         </div>
-        <div class="alt-header__column">
-            <h1 class="alt-header__title">Elsa</h1>
-        </div>
-        <div class="alt-header__column">
-            <span><i class="fas fa-search fa-lg"></i></span>
-            <span><i class="fas fa-bars fa-lg"></i></span>
-            <!--굳이 새로운 이모티콘 붙인다고 div부터 다 만들필요 없고, lastchild로 묶여있으니까 같은 div안에 넣어버리기-->
-        </div>
-       
-    </header>
+        <div class="reply__column">
+        <input type="text" placeholder="Write a message...">
+            <i class="far fa-smile-wink fa-lg"></i>
+        <button> 
+            <i class="fas fa-arrow-up"></i>
+        </button>
+    </div>
+    </form>
+
+   
 
     
     
 
     
+    <div id="no-mobile">
+        <span>Your screen is too Big</span>
+      </div>
 
 
     <script src="https://kit.fontawesome.com/6478f529f2.js" crossorigin="anonymous">
