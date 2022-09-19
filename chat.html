@@ -1,0 +1,93 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!--메타는 content랑 name가짐 -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat</title>
+    <link rel="stylesheet" href="/kokoa_talk/style.css">
+
+</head>
+
+<body id="chat-screen"> <!--배경색을 전체적으로 적용하기 위해서 -->
+
+    <div class="status-bar">
+        <div class="status-bar__column">
+            <span>No Service</span>
+            <i class="fas fa-wifi"></i>
+        </div>
+
+        <div class="status-bar__column">
+            <span>18:43</span>
+        </div>
+        <div class="status-bar__column">
+            <span>110%</span>
+            <i class="fas fa-battery-full fa-lg"></i>
+            <i class="fas fa-bolt"></i>
+        </div>
+    </div>
+
+    <main class="main-screen main-chat">
+        <div class="chat__timestamp">
+            Friday, September 16, 2022
+        </div>
+
+        <div class="message-row">
+            <img src="/kokoa_talk/images/elsa.jpg">
+            <div class="message-row__content">
+                <span class="message__author">Elsa</span>
+                <div class="message_info">
+                    <span class="message__buble">What's up</span>
+                    <span class="message__time">23:01</span>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="message-row message-row--own">
+           
+            <div class="message-row__content">
+                
+                <div class="message_info">
+                    <span class="message__buble">Hey im just chillin'</span>
+                    <span class="message__time">23:02</span>
+
+                </div>
+            </div>
+        </div>
+
+
+
+    </main>
+
+    <header class="alt-header">
+        <div class="alt-header__column">
+            <a href="chats.html">
+            <i class="fas fa-angle-left fa-3x"></i></a>   
+        </div>
+        <div class="alt-header__column">
+            <h1 class="alt-header__title">Elsa</h1>
+        </div>
+        <div class="alt-header__column">
+            <span><i class="fas fa-search fa-lg"></i></span>
+            <span><i class="fas fa-bars fa-lg"></i></span>
+            <!--굳이 새로운 이모티콘 붙인다고 div부터 다 만들필요 없고, lastchild로 묶여있으니까 같은 div안에 넣어버리기-->
+        </div>
+       
+    </header>
+
+    
+    
+
+    
+
+
+    <script src="https://kit.fontawesome.com/6478f529f2.js" crossorigin="anonymous">
+    </script>
+
+</body>
+
+</html>

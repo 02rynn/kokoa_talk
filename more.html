@@ -12,7 +12,6 @@
 </head>
 
 <body>
-
     <div class="status-bar">
         <div class="status-bar__column">
             <span>No Service</span>
@@ -39,8 +38,7 @@
         <div class="screen-header__icons">
             <span><i class="fas fa-search fa-lg"></i></span>
             <span><i class="fas fa-music fa-lg"></i></span>
-            <span>
-                <i class="fas fa-cog fa-lg">
+            <span><a href="settings.html"> <i class="fas fa-cog fa-lg"></i></a>
                     <div class="point"></div>
                 </i>
                 <!--div를 아이콘 안에 넣어주는 것이 뽀인트..였다...-->
@@ -56,8 +54,8 @@
                 <div class="user-component__text">
                     <h4 class="user-component__title">HyeRin</h4>
                     <h6 class="user-component__subtitle">010-1234-5678<i class="fas fa-info-circle"></i></h6>
-                  
-                  
+
+
                 </div>
             </div>
 
@@ -81,31 +79,34 @@
             </div>
             <div class="icon-row__icon">
                 <i class="far fa-credit-card"></i>
-                <span>Account</span></div>
+                <span>Account</span>
+            </div>
         </div>
 
         <div class="more-suggestions">
             <h4 class="more-suggestions__title">Suggestions</h4>
-        </div>
-
-        <div class="more-suggestions__icons">
-            <div class="more-suggestions__icon"> <!--여기안에 아이콘넣어 원하는만큼-->
-                <div class="more-suggestions__icon-image">
-                    <img src="./images/설리.jpg" >
-                    <span class="more-suggestions__icon-text">Monster</span>
-                <div class="more-suggestions__icon-image">
-                    <img src="./images/백설공주.jpg" >
-                    <span class="more-suggestions__icon-text">WhiteSnow</span>
+            <div class="more-suggestions__icons">
+                <div class="more-suggestions__icon">
+                    <!--여기안에 아이콘넣어 원하는만큼-->
+                    <!--얘네가 div안에 안들어가있고 ㅜㅜ 사이즈조절도 안됨-->
                     <div class="more-suggestions__icon-image">
-                    <img src="./images/toy.jpg">
+                        <img class="사진1" src="./images/설리.jpg">
+                    </div>
+                    <span class="more-suggestions__icon-text">Monster</span>
+                </div>
+                <div class="more-suggestions__icon">
+                    <div class="more-suggestions__icon-image">
+                        <img class="사진1" src="./images/백설공주.jpg">
+                    </div>
+                    <span class="more-suggestions__icon-text">WhiteSnow</span>
+                </div>
+                <div class="more-suggestions__icon">
+                    <div class="more-suggestions__icon-image">
+                        <img class="사진1" src="./images/toy.jpg">
+                    </div>
                     <span class="more-suggestions__icon-text">ToyStory</span>
-
-                    </div>    
                 </div>
-                </div>
-               
             </div>
-        </div>
         </div>
     </main>
 

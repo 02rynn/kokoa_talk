@@ -1,0 +1,140 @@
+#chat-screen{
+    background: linear-gradient(rgb(168, 101, 204)3%,rgb(63, 63, 143));
+    height: 1000vh;
+}
+
+/*아래와 같이 .찌고 표현할때, 띄어쓰기 주의 */
+#chat-screen .status-bar, 
+#chat-screen .alt-header{
+    top: 0;
+    position: fixed;
+    width: 100%;
+    box-sizing: border-box;
+    background: linear-gradient(rgb(168, 101, 204));
+
+}
+
+
+/*가운데 정렬하는 방법 -> 부모요소에 넓이를 33%씩 주고 각 자식요소들을 각각 오른쪽 왼쪽 중앙으로 정렬함*/
+.alt-header__column{
+    width: 33%;
+}
+
+.alt-header__column:first-child{
+    margin-right: auto;
+}
+
+.alt-header__column:last-child{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.alt-header__column:nth-child(2){
+    text-align: center;
+}
+
+/*-----------------------------------정렬꿑
+z-index는 div의 위치가 맨 앞에서부터 몇번째 인지를 표시함.
+*/
+
+#chat-screen .status-bar{
+    z-index: 2;                         /* chat스크린에 있는 스타투스 바는 2번째 레이어임*/
+}
+
+#chat-screen .alt-header{
+    z-index: 1;
+    top: 10px; 
+    /*status bar 보이게 하기 위헤서 */
+}
+
+.main-chat{
+    margin-top: 120px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 14px;
+
+    /*div의 width가 글자길이만큼 줄어드는데, display flex를
+    하면 글자크기에 맞춰서 줄어드는듯, 그리고 flex direction을 column으로 히면
+    다시 block특성에 맞게 늘어나는 듯 */
+}
+
+
+.chat__timestamp{
+    color: white;
+    background-color: rgb(198, 161, 232);
+    padding:  25px;
+    border-radius: 25px;
+    margin-bottom: 20px;
+    
+}
+.message-row {
+    width: 100%;
+    display: flex;
+    margin-bottom: 15px;
+   
+}
+
+.message-row img{
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    margin-right: 5px;
+}
+
+.message__author{
+    opacity: 0.8;
+    font-size: 13px;
+    margin-bottom: 8px;
+    display: block;
+    
+}
+
+.message__buble{
+    background-color: white;
+    padding: 13px;
+    border-radius: 15px;
+    border-top-left-radius: 0; /* 말풍선 모양으로 만들기 위해 이 부분을 뾰족하게 */
+    margin-right: 5px;
+}
+
+.message_info{
+    display: flex;
+   align-items: flex-end; /*말풍선은 높고 시간은 높이가 낮아서, flex-end
+   를 사용하면 시간만 밑으로 떨어지는 효과가 발생함 */
+}
+
+.message__time{
+    opacity: 0.5;
+    font-size: 10px;
+}
+
+.message-row--own{
+    justify-content: flex-end; /*내 말풍선을 오른쪽으로 정렬함*/
+    
+}
+
+.message-row--own .message__buble{
+    background-color: rgb(208, 155, 209);
+    border-top-right-radius: 0px; /*모서리 방향 반대로 */
+    border-top-left-radius: 15px;
+}
+
+/* .message-row--own .message__buble{
+    order: 1 ; order은 flex children에게만 적용가능
+    margin-left: 5px;
+}
+
+.message-row--own .message__time{
+    order:0;
+} 
+
+그렇지만 코드가 다소 복잡하기 때문에 말풍선과 시간의 순서를 바꾸기위해 그냥
+row-reverse사용해도 됨  */
+
+.message-row--own .message_info{
+    flex-direction: row-reverse;
+    margin-left: 5px;
+}
+
+

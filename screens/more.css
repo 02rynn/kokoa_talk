@@ -18,11 +18,53 @@
     margin-bottom: 20px;
 }
 
-.more-suggestions__icons{
+/* .more-suggestions__icon {
+    margin-right: 30px;
     display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .more-suggestions__icon-image {
+    width: 60px;
+    height: 60px;
+    background-color: var(--yellow);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+  }      
+  
+  .more-suggestions__icon-image i {
+  font-size: 32px;
+  color: white;
+}
+  */
+  
+  
+/*여기까지가 정석이고... 아래부터는 내꺼..*/
+
+.more-suggestions__icons{
+display: flex;
+justify-content: space-between;
+align-items: center;   
 }
 
-.more-suggestions__icon{
-    margin-right: 30px;
+/* 
+.more-suggestions__icon-image{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;} */
+    
+   
+    
+
+.사진1{
+    width: 60px;
+    height: 60px;
+    border-radius: 20px;
+    /*border radius안되는지..? 안된다면 어떻게 모서리 둥글게 만들엄*/
 
 }
